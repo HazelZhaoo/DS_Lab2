@@ -17,10 +17,10 @@ public:
         value = passed_value;
         priority = prior;
         
-        cout << passed_value << " value" << "\n" << prior << " priority" << endl;
+        cout <<"QueueItem constructed with "<< passed_value << " value" << "and" << prior << " priority" << endl;
         
     };
-    T getValue()
+    T getValue() const
     {
         cout << value << endl;
         return value;
@@ -35,7 +35,7 @@ public:
         priority = p ;
     };
 
-    int getPrio()
+    int getPrio() const
     {
         cout << priority << endl;
         return priority;

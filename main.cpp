@@ -6,27 +6,32 @@ using namespace std;
 
 int main()
 {
-    Queue<QueueItem<int>> q1;
+    Queue<QueueItem<string>> q1;
     Queue<QueueItem<int>> q2;
+    QueueItem<string> I1( "Sushi" , 8);
+    QueueItem<string> str1("Tokboki" , 9);
+    QueueItem<string> str2("Ramen" , 6);
+    QueueItem<string> str3("Steak" , 7);
+    QueueItem<string> str4("Hotpot" , 1);
+    QueueItem<string> str5("BBQ" , 9);
     
-//    q1.enqueue(2);
-//    q1.enqueue(3);
-     
-//    q1.getSize();
-    Queue<QueueItem<int>>* ptr = q1;
-    
-    QueueItem<int> I1( 2 , 8);
     QueueItem<int> I2(3 , 8);
     QueueItem<int> A2(6 , 9);
     QueueItem<int> A3(4 , 9);
-//    q1.enqueue(I1);
-    q1.enqueue(I2);
+    q1.enqueue(I1);
+    q1.enqueue(I1);
     q2.enqueue(A2);
     q2.enqueue(A3);
     
-    Priority<Queue<QueueItem<int>>> P_test(ptr);
- 
+    Priority<string> P_test;
+    P_test.enqueue(I1);
+    P_test.enqueue(str1);
+    P_test.enqueue(str2);
+    P_test.enqueue(str3);
+    P_test.enqueue(str4);
+    P_test.enqueue(str5);
     
+    P_test.dequeue();
      
     
     

@@ -26,7 +26,7 @@ private:
 public:
     Queue():front(nullptr) , back(nullptr) , size(0)
     {
-        cout << "constructed" << endl;
+        cout << "Queue constructed." << endl;
     };
 
     ~Queue()
@@ -35,7 +35,7 @@ public:
         {
             Node<T>* temp = front;
             front = front ->next;
-            delete[] temp;
+            delete temp;
         }
     };
     
@@ -50,7 +50,7 @@ public:
         back = insert_node;
         
         size++;
-        cout << "enqueue" << item << endl;
+        cout << "enqueue " << item <<" by enqueue from Queue"<< endl;
     };
     
     T dequeue()
@@ -70,13 +70,13 @@ public:
           {
             back = nullptr;
           }
-        cout << "dequeue" << value <<endl;
+        cout << "dequeue " << value << " by dequeue from Queue" <<endl;
         return value;
       }
     
     bool isEmpty()
     {
-        return front = nullptr;
+        return front == nullptr;
     }
     
     int getSize()
